@@ -33,7 +33,7 @@ function App() {
       setIsUpdate(false)
       setName('')
     }else{
-      const newItem = { id: new Date().getUTCMilliseconds().toString(), title: name };
+      const newItem = { id: Math.random(lists.length + 1), title: name };
       setLists([...lists, newItem]);
       setName('');
       showAlert(true, 'success', ' Thêm Job thành công !')
