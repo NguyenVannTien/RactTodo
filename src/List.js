@@ -6,13 +6,12 @@ function List (props) {
     <div className='grocery-list'>
 
       {list.map((job) => { 
-        const {id , title} = job;
         return(
-          <div key={id} className='grocery-item'>
-            <p className='title'>{title}</p>
+          <div key={job.id} className='grocery-item'>
+            <p className='title'>{job.title}</p>
             <div className='btn-container'>
-              <button type ='button' className='edit-btn' onClick={() => handleEditItem(id)}> <FaEdit/> </button>
-              <button type ='button' className='delete-btn' onClick={() => handleDeleteItem(id)}> <FaTrash/> </button>
+              <button type ='button' className='edit-btn' onClick={() => handleEditItem(job.id)}> <FaEdit/> </button>
+              <button type ='button' className='delete-btn' onClick={() => handleDeleteItem(job.id)}> <FaTrash/> </button>
             </div>
           </div>
         )
